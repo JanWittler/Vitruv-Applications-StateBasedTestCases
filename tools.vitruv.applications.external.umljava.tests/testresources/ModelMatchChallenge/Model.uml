@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_yDjP8GCHEeuXVeKbayxnSg" name="Model_Matching_Challenge">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_yGsqkGCHEeuXVeKbayxnSg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_DrIxsGCIEeuXVeKbayxnSg" name="de">
+    <packagedElement xmi:type="uml:Class" xmi:id="_HFIzYGCIEeuXVeKbayxnSg" name="DomesticAnimal" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_PIpW0GCIEeuXVeKbayxnSg" name="nickname">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_RXsoUGCIEeuXVeKbayxnSg" name="species">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_wnsPYHs1Eeudv5geGKGmhg" name="owner" type="_X4_yIGCIEeuXVeKbayxnSg" association="_wnmIwHs1Eeudv5geGKGmhg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wnuEkHs1Eeudv5geGKGmhg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wnuroHs1Eeudv5geGKGmhg" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_X4_yIGCIEeuXVeKbayxnSg" name="Owner"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_aDJ8kGCIEeuXVeKbayxnSg" name="Person"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_wnmIwHs1Eeudv5geGKGmhg" memberEnd="_wnsPYHs1Eeudv5geGKGmhg _wnuroXs1Eeudv5geGKGmhg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wnrBQHs1Eeudv5geGKGmhg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wnrBQXs1Eeudv5geGKGmhg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_wnuroXs1Eeudv5geGKGmhg" name="domesticAnimal" type="_HFIzYGCIEeuXVeKbayxnSg" association="_wnmIwHs1Eeudv5geGKGmhg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4zPUgHs1Eeudv5geGKGmhg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4za6sHs1Eeudv5geGKGmhg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_wrtd0GCIEeuXVeKbayxnSg" name="Model_Matching_Challenge_Swap">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_wsp5AGCIEeuXVeKbayxnSg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_4jocUGCIEeuXVeKbayxnSg" name="de">
+    <packagedElement xmi:type="uml:Package" xmi:id="_AsNF8GCJEeuXVeKbayxnSg" name="shop">
+      <packagedElement xmi:type="uml:Class" xmi:id="_QcxbsGCJEeuXVeKbayxnSg" name="DomesticAnimalNew">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_UEtLsGCJEeuXVeKbayxnSg" name="nickname">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Vkb5EGCJEeuXVeKbayxnSg" name="species">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_LLOCgGCJEeuXVeKbayxnSg" name="core">
+      <packagedElement xmi:type="uml:Class" xmi:id="_4jocUWCIEeuXVeKbayxnSg" name="DomesticAnimal" visibility="public">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4jocUmCIEeuXVeKbayxnSg" name="nickname">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4jpDYGCIEeuXVeKbayxnSg" name="species">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

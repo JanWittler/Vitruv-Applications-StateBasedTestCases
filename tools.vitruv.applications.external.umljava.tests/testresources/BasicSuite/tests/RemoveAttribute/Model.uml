@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_U6DUIEOREeuCW9_lH5eJdg" name="Root">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_VBoi0EOREeuCW9_lH5eJdg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_r9BggEOREeuCW9_lH5eJdg" name="com.example.first">
+    <packagedElement xmi:type="uml:Class" xmi:id="_o1w0oEOREeuCW9_lH5eJdg" name="Example">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_KQKgIFmREeunzbH-yYnstA" name="nameEquals" concurrency="concurrent">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_KQKgIVmREeunzbH-yYnstA" name="otherName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_KQKgIlmREeunzbH-yYnstA" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_kg2QkFmPEeunzbH-yYnstA" name="com.example.second">
+    <packagedElement xmi:type="uml:Class" xmi:id="_pHfrkFmPEeunzbH-yYnstA" name="Second" visibility="public"/>
+  </packagedElement>
+</uml:Model>
