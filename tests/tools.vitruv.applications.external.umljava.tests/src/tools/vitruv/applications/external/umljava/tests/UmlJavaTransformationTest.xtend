@@ -41,7 +41,7 @@ abstract class UmlJavaTransformationTest extends ViewBasedVitruvApplicationTest 
 		JavaClasspath.reset()
 		JamoppLibraryHelper.registerStdLib()
 		viewFactory = new JavaUmlViewFactory(virtualModel)
-//		configureBidirectionalExecution
+		configureBidirectionalExecution
 	}
 
 	@BeforeEach

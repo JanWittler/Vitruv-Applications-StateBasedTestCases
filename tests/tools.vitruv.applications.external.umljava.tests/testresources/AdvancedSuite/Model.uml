@@ -94,6 +94,7 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_Ei5X4IsAEeu77ryp2v3txw" name="AbstractData" isAbstract="true">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_Z-ZQIIsAEeu77ryp2v3txw" name="binaryData">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0zxRwM-iEeyzVtd3DcxODA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cjUrAIsAEeu77ryp2v3txw" value="*"/>
         </ownedAttribute>
       </packagedElement>

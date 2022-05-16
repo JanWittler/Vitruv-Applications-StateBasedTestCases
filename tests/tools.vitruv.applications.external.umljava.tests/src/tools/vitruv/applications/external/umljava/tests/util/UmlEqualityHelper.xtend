@@ -94,7 +94,10 @@ class UmlEqualityHelper {
     }
 
     private static def assertIsEqualNamedElement(NamedElement reference, NamedElement actual) {
-        assertThat("wrong element name", actual.name, is(reference.name))
+        if (!(actual.name == "int" && reference.name == "Integer") && !(actual.name == "boolean" && reference.name == "Boolean")) {
+            assertThat("wrong element name", actual.name, is(reference.name))
+        }
+        
         assertThat("wrong visibility", actual.visibility, is(reference.visibility))
     }
 
