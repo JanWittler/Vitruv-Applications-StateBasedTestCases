@@ -17,6 +17,7 @@ import tools.vitruv.framework.views.changederivation.StateBasedChangeResolutionS
 
 import static extension edu.kit.ipd.sdq.commons.util.java.lang.IterableUtil.claimOne
 
+@DisplayName("[UML -> Java] Advanced Suite")
 class UmlJavaAdvancedSuiteTest extends AbstractUmlToJavaTest {
 
     override getTestSuiteName() {
@@ -36,7 +37,7 @@ class UmlJavaAdvancedSuiteTest extends AbstractUmlToJavaTest {
         testModelInDirectory("ChangeMethodSignature", strategy)
     }
 
-    @DisplayName("change method signature - extended")
+    @DisplayName("change method signature - complex")
     @ParameterizedTest
     @MethodSource("strategiesToTest")
     def void changeMethodSignature_Extended(StateBasedChangeResolutionStrategy strategy) {
@@ -85,7 +86,7 @@ class UmlJavaAdvancedSuiteTest extends AbstractUmlToJavaTest {
         testModelInDirectory("RenameClass", strategy)
     }
 
-    @DisplayName("rename class - extended")
+    @DisplayName("rename class - complex")
     @ParameterizedTest
     @MethodSource("strategiesToTest")
     def void testRenameClass_Extended(StateBasedChangeResolutionStrategy strategy) {

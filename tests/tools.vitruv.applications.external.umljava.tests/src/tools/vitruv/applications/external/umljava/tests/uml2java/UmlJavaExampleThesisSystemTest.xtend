@@ -10,6 +10,7 @@ import tools.vitruv.framework.views.changederivation.StateBasedChangeResolutionS
 
 import static extension edu.kit.ipd.sdq.commons.util.java.lang.IterableUtil.claimOne
 
+@DisplayName("[UML -> Java] Example Thesis System")
 class UmlJavaExampleThesisSystemTest extends AbstractUmlToJavaTest {
     override getTestSuiteName() {
         "ExampleThesisSystem"
