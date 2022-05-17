@@ -30,6 +30,15 @@ class UmlJavaAdvancedSuiteTest extends AbstractUmlToJavaTest {
         super.setup()
     }
 
+    /**
+     * Changes:
+     * - Change Data.deserialize.static = true
+     * - Change Data.deserialize.returnType to Boolean
+     * - Add parameter to Data.deserialize
+     * - Change name of new parameter to data
+     * - Change type of new parameter to Data
+     * - Rename Data.deserialize to deserializeData
+     */
     @DisplayName("change method signature")
     @ParameterizedTest
     @MethodSource("strategiesToTest")
@@ -37,6 +46,14 @@ class UmlJavaAdvancedSuiteTest extends AbstractUmlToJavaTest {
         testModelInDirectory("ChangeMethodSignature", strategy)
     }
 
+    /**
+     * Changes:
+     * - Change Data.deserialize.static = true
+     * - Add parameter to Data.deserialize
+     * - Change name of new parameter to data
+     * - Change type of new parameter to Data
+     * - Rename Data.deserialize to toStringRepresentation
+     */
     @DisplayName("change method signature - complex")
     @ParameterizedTest
     @MethodSource("strategiesToTest")
@@ -44,6 +61,11 @@ class UmlJavaAdvancedSuiteTest extends AbstractUmlToJavaTest {
         testModelInDirectory("ChangeMethodSignature_extended", strategy)
     }
 
+    /**
+     * Changes:
+     * - Move AbstractData.binaryData to Data
+     * - Delete AbstractData
+     */
     @DisplayName("collapse hierarchy")
     @ParameterizedTest
     @MethodSource("strategiesToTest")
@@ -51,6 +73,17 @@ class UmlJavaAdvancedSuiteTest extends AbstractUmlToJavaTest {
         testModelInDirectory("CollapseHierarchy", strategy)
     }
 
+    /**
+     * Changes:
+     * - Create class Interface in package basic.config
+     * - Add inheritance from ProvidedInterface to Interface
+     * - Move ProvidedInterface.name to Interface
+     * - Move ProvidedInterface.providedMethods to Interface
+     * - Rename Interface.providedMethods to methods
+     * - Add inheritance from RequiredInterface to Interface
+     * - Delete RequiredInterface.name
+     * - Delete RequiredInterface.requiredMethods
+     */
     @DisplayName("extract superclass")
     @ParameterizedTest
     @MethodSource("strategiesToTest")
@@ -58,6 +91,11 @@ class UmlJavaAdvancedSuiteTest extends AbstractUmlToJavaTest {
         testModelInDirectory("ExtractSuperclass", strategy)
     }
 
+    /**
+     * Changes:
+     * - Move Metadata.encoding to Data
+     * - Delete Metadata
+     */
     @DisplayName("inline class")
     @ParameterizedTest
     @MethodSource("strategiesToTest")
@@ -65,6 +103,27 @@ class UmlJavaAdvancedSuiteTest extends AbstractUmlToJavaTest {
         testModelInDirectory("InlineClass", strategy)
     }
 
+    /**
+     * Changes:
+     * - Create class Printer in package basic.config
+     * - Move EJB.printProvidedInterfaces to Printer
+     * - Add parameter to Printer.printProvidedInterfaces
+     * - Change name of new parameter to ejb
+     * - Change type of new parameter to EJB
+     * - Move EJB.printRequiredInterfaces to Printer
+     * - Add parameter to Printer.printRequiredInterfaces
+     * - Change name of new parameter to ejb
+     * - Change type of new parameter to EJB
+     * - Add property to EJB
+     * - Change name of new property to printer
+     * - Create new association between EJB and Printer
+     * - Add EJB.printer to memberEnd of new association
+     * - Create new ownedEnd in new association
+     * - Change name of ownedEnd to ejb
+     * - Change type of ownedEnd to EJB
+     * - Change cardinality of ejb in new association to 1..1
+     * - Change cardinality of printer in new association to 1..1
+     */
     @DisplayName("extract associated class")
     @ParameterizedTest
     @MethodSource("strategiesToTest")
@@ -72,6 +131,10 @@ class UmlJavaAdvancedSuiteTest extends AbstractUmlToJavaTest {
         testModelInDirectory("ExtractAssociatedClass", strategy)
     }
 
+    /**
+     * Changes:
+     * - Delete class LegacyData
+     */
     @DisplayName("remove associated class")
     @ParameterizedTest
     @MethodSource("strategiesToTest")
@@ -79,6 +142,12 @@ class UmlJavaAdvancedSuiteTest extends AbstractUmlToJavaTest {
         testModelInDirectory("RemoveAssociatedClass", strategy)
     }
 
+    /**
+     * Changes:
+     * - Change name of Method to Operation
+     * - Change name of ProvidedInterface.providedMethods to providedOperations
+     * - Change name of RequiredInterface.requiredMethods to requiredOperations
+     */
     @DisplayName("rename class")
     @ParameterizedTest
     @MethodSource("strategiesToTest")
@@ -86,6 +155,12 @@ class UmlJavaAdvancedSuiteTest extends AbstractUmlToJavaTest {
         testModelInDirectory("RenameClass", strategy)
     }
 
+    /**
+     * Changes:
+     * - Change name of Method to Operation
+     * - Change name of ProvidedInterface.providedMethods to operations
+     * - Change name of RequiredInterface.requiredMethods to operations
+     */
     @DisplayName("rename class - complex")
     @ParameterizedTest
     @MethodSource("strategiesToTest")
@@ -93,6 +168,12 @@ class UmlJavaAdvancedSuiteTest extends AbstractUmlToJavaTest {
         testModelInDirectory("RenameClass_extended", strategy)
     }
 
+    /**
+     * Changes:
+     * - Create package l2 in package basic.config
+     * - Create package l3 in package basic.config.l2
+     * - Move LegacyData to package basic.config.l2.l3
+     */
     @DisplayName("move class")
     @ParameterizedTest
     @MethodSource("strategiesToTest")
