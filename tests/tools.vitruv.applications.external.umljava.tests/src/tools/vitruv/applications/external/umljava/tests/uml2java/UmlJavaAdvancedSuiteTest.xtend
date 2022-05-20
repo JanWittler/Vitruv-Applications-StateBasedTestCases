@@ -33,7 +33,6 @@ class UmlJavaAdvancedSuiteTest extends AbstractUmlToJavaTest {
     /**
      * Changes:
      * - Change Data.deserialize.static = true
-     * - Change Data.deserialize.returnType to Boolean
      * - Add parameter to Data.deserialize
      * - Change name of new parameter to data
      * - Change type of new parameter to Data
@@ -52,7 +51,7 @@ class UmlJavaAdvancedSuiteTest extends AbstractUmlToJavaTest {
      * - Add parameter to Data.deserialize
      * - Change name of new parameter to data
      * - Change type of new parameter to Data
-     * - Rename Data.deserialize to toStringRepresentation
+     * - Rename Data.deserialize to decodeData
      */
     @DisplayName("change method signature - complex")
     @ParameterizedTest

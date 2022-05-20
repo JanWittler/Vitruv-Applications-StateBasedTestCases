@@ -13,7 +13,7 @@ public class Data extends AbstractData {
 	public void setMetadata(Metadata metadata) {
 		this.metadata = metadata;
 	}
-	public static String toStringRepresentation(Data data) {
+	public static String decodeData(Data data) {
 		return this.metadata;
 	}
 }

@@ -2,6 +2,7 @@ package basic.data;
 
 import basic.data.AbstractData;
 import basic.data.Metadata;
+import java.lang.String;
 
 
 public class Data extends AbstractData {
@@ -12,7 +13,7 @@ public class Data extends AbstractData {
 	public void setMetadata(Metadata metadata) {
 		this.metadata = metadata;
 	}
-	public static boolean deserializeData(Data data) {
+	public static String deserializeData(Data data) {
 		return this.metadata;
 	}
 }

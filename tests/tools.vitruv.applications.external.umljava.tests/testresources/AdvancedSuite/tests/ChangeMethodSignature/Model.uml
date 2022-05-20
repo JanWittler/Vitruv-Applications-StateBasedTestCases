@@ -101,8 +101,8 @@
         <generalization xmi:type="uml:Generalization" xmi:id="_OSlJQIsAEeu77ryp2v3txw" general="_Ei5X4IsAEeu77ryp2v3txw"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_997f8IsIEeu77ryp2v3txw" name="metadata" type="_4LMFQIsIEeu77ryp2v3txw" aggregation="composite" association="_99644IsIEeu77ryp2v3txw"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_tN87oIsIEeu77ryp2v3txw" name="deserializeData" isStatic="true">
-          <ownedParameter xmi:id="__YIODp-iEeyfBOeibt4t-Q" direction="return">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_tN87oYsIEeu77ryp2v3txw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
           <ownedParameter xmi:id="__YIOD5-iEeyfBOeibt4t-Q" name="data" type="_FeonYIsAEeu77ryp2v3txw"/>
         </ownedOperation>
