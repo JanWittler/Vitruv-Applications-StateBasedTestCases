@@ -1,6 +1,0 @@
-[submodule "Vitruv"]
-	path = Vitruv
-	url = https://github.com/vitruv-tools/Vitruv.git
-[submodule "Vitruv-CaseStudies"]
-	path = Vitruv-CaseStudies
-	url = https://github.com/vitruv-tools/Vitruv-CaseStudies.git

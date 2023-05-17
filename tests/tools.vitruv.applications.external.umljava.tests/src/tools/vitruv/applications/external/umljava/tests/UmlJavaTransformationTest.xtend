@@ -6,22 +6,21 @@ import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.compare.utils.UseIdentifiers
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.xtend.lib.annotations.Accessors
-import org.emftext.language.java.JavaClasspath
+import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Named
 import org.junit.jupiter.api.^extension.ExtendWith
 import tools.vitruv.applications.external.umljava.tests.util.JavaUmlViewFactory
 import tools.vitruv.applications.umljava.JavaToUmlChangePropagationSpecification
 import tools.vitruv.applications.umljava.UmlToJavaChangePropagationSpecification
-import tools.vitruv.domains.java.JamoppLibraryHelper
-import tools.vitruv.domains.java.JavaDomainProvider
-import tools.vitruv.domains.uml.UmlDomainProvider
+import tools.vitruv.applications.util.temporary.java.JavaSetup
 import tools.vitruv.framework.views.View
 import tools.vitruv.framework.views.changederivation.DefaultStateBasedChangeResolutionStrategy
 import tools.vitruv.testutils.TestLogging
 import tools.vitruv.testutils.ViewBasedVitruvApplicationTest
 
 import static tools.vitruv.applications.external.umljava.tests.util.TransformationDirectionConfiguration.configureUnidirectionalExecution
+import static tools.vitruv.applications.external.umljava.tests.util.TransformationDirectionConfiguration.configureBidirectionalExecution
 
 @ExtendWith(TestLogging)
 abstract class UmlJavaTransformationTest extends ViewBasedVitruvApplicationTest {
@@ -33,20 +32,21 @@ abstract class UmlJavaTransformationTest extends ViewBasedVitruvApplicationTest 
 	static val UML_MODEL_NAME = "model"
 	@Accessors(PROTECTED_GETTER)
 	static val MODEL_FOLDER_NAME = "model"
+	
+	@BeforeAll
+	def static void setupJavaFactories() {
+		JavaSetup.prepareFactories()
+	}
 
 	@BeforeEach
 	def void setupClasspathAndViewFactory() {
-		// Reset Java classpath before every test to ensure that caches are reset
-		// and not objects are stored and produce memory leaks
-		JavaClasspath.reset()
-		JamoppLibraryHelper.registerStdLib()
+		JavaSetup.resetClasspathAndRegisterStandardLibrary()
 		viewFactory = new JavaUmlViewFactory(virtualModel)
-		configureBidirectionalExecution
 	}
 
 	@BeforeEach
 	def setupTransformationDirection() {
-		configureUnidirectionalExecution()
+		configureUnidirectionalExecution(virtualModel)
 	}
 
 	protected def Path getProjectModelPath(String modelName) {
@@ -71,10 +71,5 @@ abstract class UmlJavaTransformationTest extends ViewBasedVitruvApplicationTest 
             Named.of("only identifiers", new DefaultStateBasedChangeResolutionStrategy(UseIdentifiers.ONLY)),
             Named.of("never identifiers", new DefaultStateBasedChangeResolutionStrategy(UseIdentifiers.NEVER))
         )
-    }
-
-    def static void configureBidirectionalExecution() {
-        new JavaDomainProvider().domain.enableTransitiveChangePropagation
-        new UmlDomainProvider().domain.enableTransitiveChangePropagation
     }
 }
