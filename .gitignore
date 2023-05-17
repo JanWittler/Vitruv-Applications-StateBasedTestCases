@@ -27,3 +27,6 @@ target/
 
 # Custom
 EvaluationData
+
+# Include src-gen of atomic changes to avoid having to regenerate them
+!overrides/bundles/tools.vitruv.change.atomic/src-gen
