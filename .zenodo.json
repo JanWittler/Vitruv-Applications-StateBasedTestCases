@@ -1,0 +1,23 @@
+{
+    "creators": [
+        {
+            "orcid": "0000-0002-0989-5010",
+            "affiliation": "Karlsruhe Institute of Technology (KIT)",
+            "name": "Jan Willem Wittler"
+        },
+        {
+            "orcid": "0000-0001-5983-4032",
+            "affiliation": "Karlsruhe Institute of Technology (KIT)",
+            "name": "Timur Sağlam"
+        },
+      	{
+            "orcid": "0000-0001-7312-2891",
+            "affiliation": "Martin Luther University Halle-Wittenberg",
+            "name": "Thomas Kühn"
+        }
+    ],
+    "license": "CC-BY-4.0",
+    "title": "Replication Package for the Paper \"Evaluating Model Differencing for the Consistency Preservation of State-based Views\"",
+    "description": "Replication Package for the Paper \"Evaluating Model Differencing for the Consistency Preservation of State-based Views\" published at the 19th European Conference on Modelling Foundations and Applications (ECMFA 2023). This package contains the tests described in the paper and additional test suites.",
+    "keywords": ["Model-view consistency", "Model differencing", "Model comparison", "View-update problem", "Change sequence", "View-based development", "Vitruvius"]
+}
