@@ -1,4 +1,5 @@
 # Evaluating Model Differencing for the Consistency Preservation of State-based Views
+[![DOI](https://zenodo.org/badge/488912606.svg)](https://zenodo.org/badge/latestdoi/488912606)
 
 This repository serves as a replication package for the results discussed in the paper _Evaluating Model Differencing for the Consistency Preservation of State-based Views_.
 The paper is published at the 19th European Conference on Modelling Foundations and Applications (ECMFA 2023).
